@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant reservations adm panel</title>
+    <!--jQuery-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!--Angular ui-router-->
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--Moment-->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <!--Full calendar-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="js/resApp.js"></script>
+    <script src="js/controller/mainController.js"></script>
+    <script src="js/controller/loginController.js"></script>
+    <script src="js/controller/tableController.js"></script>
+    <script src="js/controller/resController.js"></script>
+    <script src="js/calendar.js"></script>
+
+    <style>
+
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body ng-app="resApp">
+
+    <div ui-view></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="row" ng-controller="loginController" ng-show="notLoggedIn">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 panel panel-primary">
+        <div class="panel-heading">Log in to admin panel</div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
