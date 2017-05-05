@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Reservation")
+@Table(name="Tables")
 
 public class Tables {
 
