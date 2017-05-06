@@ -1,7 +1,7 @@
 package restauracja.model;
 
 
-import com.sun.istack.internal.NotNull;
+//import com.sun.istack.internal.NotNull;
 
 
 import java.sql.Time;
@@ -18,12 +18,12 @@ public class Reservation {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int idReservation;
 
-    @NotNull
+//    @NotNull
     @OneToMany
     @JoinColumn(name="idTable")
     private Tables table;
 
-    @NotNull
+//    @NotNull
     @OneToMany
     @JoinColumn(name="idClient")
     private Client client;
@@ -37,7 +37,7 @@ public class Reservation {
     @Column(name="endTime", nullable = false)
     private Time endTime;
 
-    @NotNull
+//    @NotNull
     @Column(name="status")
     private boolean status;
 
