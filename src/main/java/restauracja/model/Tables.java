@@ -1,45 +1,43 @@
 package restauracja.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="Reservation")
+@Table(name="tables")
 
 public class Tables {
 
     @Id
-    @Column(name="idTable")
+    @Column(name="id")
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int idTable;
+    private int id;
 
-    @NotEmpty
-    @Column(name="sits")
-    private int sits;
+//    @NotEmpty
+    @Column(name="seats")
+    private int seats;
 
-    @NotEmpty
+//    @NotEmpty
     @Column(name="name")
     private String name;
 
-    @NotEmpty
-    @Column(name="description")
+//    @NotEmpty
+    @Column(name="desc")
     private String description;
 
-    public int getIdTable() {
-        return idTable;
+    public int getId() {
+        return id;
     }
 
-    public void setIdTable(int idTable) {
-        this.idTable = idTable;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getSits() {
-        return sits;
+    public int getSeats() {
+        return seats;
     }
 
-    public void setSits(int sits) {
-        this.sits = sits;
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
 
     public String getName() {

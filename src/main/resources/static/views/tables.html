@@ -1,26 +1,49 @@
 <div ng-controller="tableController">
-    <h3>{{title}}</h3>
-    <table class="table table-hover">
-        <tr>
-            <th>Delete</th>
-            <th>Table number</th>
-            <th>Table name</th>
-            <th>Edit</th>
-        </tr>
-        <tr ng-repeat="table in tableList">
-            <td>
-                <button class="btn btn-danger">Delete</button>
-            </td>
-            <td>{{table[0]}}</td>
-            <td><a ui-sref=".reservations">{{table[1]}}</a></td>
-            <td>
-                <button class="btn btn-primary">Edit</button>
-            </td>
-        </tr>
-    </table>
-    <button class="btn btn-warning">Add</button>
+    <div class="panel panel-primary">
+        <div class="panel panel-heading">
+            <h3>{{title}}</h3>
+        </div>
+        <div class="panel panel-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Table number</th>
+                    <th>Table name</th>
+                    <th>No. of seats</th>
+                    <th>Table description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr ng-repeat="table in tables">
+                    <td>{{table.id}}</td>
+                    <td><a ui-sref=".reservations">{{table.name}}</a></td>
+                    <td>{{table.seats}}</td>
+                    <td>{{table.description}}</td>
+                    <td>
+                        <button class="btn btn-primary"
+                                uib-popover-template="editPopover.templateUrl"
+                                popover-placement="left-bottom"
+                                popover-title="{{editPopover.title}}"
+                                popover-is-open="saved"><span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger"
+                                uib-popover-template="deletePopover.templateUrl"
+                                popover-placement="left-bottom"
+                                popover-title="{{deletePopover.title}}"
+                                popover-is-open="deleted"><span class="glyphicon glyphicon-minus"></span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-warning"><span class="glyphicon glyphicon-plus"></span></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
     <div class="row">
-        <div ui-view="reservations"></div>
-        <div ui-view="editpanel"></div>
+        <div class="col-sm-6" ui-view></div>
     </div>
 </div>

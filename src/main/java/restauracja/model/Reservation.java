@@ -1,41 +1,30 @@
 package restauracja.model;
 
 
-//import com.sun.istack.internal.NotNull;
-
-
-import java.sql.Time;
 import java.util.Date;
 import javax.persistence.*;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="Reservation")
+@Table(name="reservation")
 public class Reservation {
 
     @Id
-    @Column(name="idReservation")
+    @Column(name="id")
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int idReservation;
 
 //    @NotNull
-    @OneToMany
-    @JoinColumn(name="idTable")
+    @ManyToOne(targetEntity = Tables.class)
+    @JoinColumn(name="table_id")
     private Tables table;
 
 //    @NotNull
-    @OneToMany
-    @JoinColumn(name="idClient")
+    @ManyToOne(targetEntity = Client.class)
+    @JoinColumn(name="client_id")
     private Client client;
 
-    @Column(name = "date", nullable = false)
-    private Date date;
-
-    @Column(name="startTime", nullable = false)
-    private Time startTime;
-
-    @Column(name="endTime", nullable = false)
-    private Time endTime;
+    @Column(name = "res_date", nullable = false)
+    private Date resDate;
 
 //    @NotNull
     @Column(name="status")
@@ -66,28 +55,12 @@ public class Reservation {
         this.client = client;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getResDate() {
+        return resDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Time getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Time startTime) {
-        this.startTime = startTime;
-    }
-
-    public Time getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Time endTime) {
-        this.endTime = endTime;
+    public void setResDate(Date resDate) {
+        this.resDate = resDate;
     }
 
     public boolean isStatus() {

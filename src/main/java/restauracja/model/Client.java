@@ -5,11 +5,11 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name="Client")
+@Table(name="client")
 public class Client {
 
     @Id
-    @Column(name="idClient")
+    @Column(name="id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int idClient;
 
@@ -22,7 +22,7 @@ public class Client {
     private String surname;
 
     @NotEmpty
-    @Column(name="mail")
+    @Column(name="email")
     private String mail;
 
     @NotEmpty

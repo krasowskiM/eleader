@@ -1,4 +1,4 @@
-var resApp = angular.module('resApp', ['ui.router']);
+var resApp = angular.module('resApp', ['ui.router', 'ngAnimate', 'ui.bootstrap']);
 
 resApp.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/login');
@@ -11,8 +11,7 @@ resApp.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('tables', {
             url: '/tables',
-            templateUrl: 'views/tables.html',
-            controller: 'tableController'
+            templateUrl: 'views/tables.html'
         })
         .state('tables.reservations', {
             url: '/reservations',

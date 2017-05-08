@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="resApp">
 <head>
     <title>Restaurant reservations adm panel</title>
     <!--jQuery-->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!--Angular animate-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
     <!--Angular ui-router-->
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!--Moment-->
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="//momentjs.com/downloads/moment.min.js"></script>
     <!--Full calendar-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <!-- BootStrap -->
@@ -20,6 +22,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+
+    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="js/resApp.js"></script>
     <script src="js/controller/mainController.js"></script>
     <script src="js/controller/loginController.js"></script>
@@ -27,23 +31,8 @@
     <script src="js/controller/resController.js"></script>
     <script src="js/calendar.js"></script>
 
-    <style>
-
-        body {
-            margin: 40px 10px;
-            padding: 0;
-            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-            font-size: 14px;
-        }
-
-        #calendar {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-    </style>
 </head>
-<body ng-app="resApp">
+<body>
 
     <div ui-view></div>
 
